@@ -9,9 +9,10 @@ require_relative "models/post"
 require_relative "controllers/posts"
 
 #index route
-get "/" do
-  erb :index
-end
+# get "/" do
+#   @posts = Post.all
+#   erb :index
+# end
 
 #user stories
 #as a user, i want to add a picture
