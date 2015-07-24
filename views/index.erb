@@ -1,1 +1,13 @@
-<h2>hello world</h2>
+<p><a href='/posts/new'> [Upload a Post]</a></p>
+
+<ul>
+  <% @posts.each do |post| %>
+    <a href="/posts/<%= post.id %>">
+      <li>
+        <h2><%= post.author %></h2>
+        <h3>Post on: <%= post.date_taken %> </h3>
+        <img src="<%= post.photo_url %>">
+      </li>
+    </a>
+  <% end %>
+</ul>
