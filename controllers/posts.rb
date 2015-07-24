@@ -25,3 +25,23 @@ post '/posts' do
   @post = Post.create(params[:post])
   redirect "/posts/#{@post.id}"
 end
+
+# edit route (form)
+get "/posts/:id/edit" do
+  @post = Post.find(params[:id])
+  erb :edit
+end
+
+# update route
+put "/posts/:id" do
+  @post = Post.find(params[:id])
+  @post.update(params[:post])
+  redirect "/posts/#{@post.id}"
+end
+
+# delete route
+delete "/posts/:id" do
+  @post = Post.find(params[:id])
+  @post.destroy
+  redirect "/posts"
+end

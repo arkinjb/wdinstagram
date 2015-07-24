@@ -2,5 +2,6 @@
 <div class="single_post">
     <img src="<%= @post.photo_url %>"><br>
     Photo by: <%= @post.author %><br>
-    Posted on: <%= @post.date_taken %>
+    Posted on: <%= @post.date_taken %><br>
+    <a href="/posts/<%= @post.id %>/edit">Edit Post</a>
 </div>

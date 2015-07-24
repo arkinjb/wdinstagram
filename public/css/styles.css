@@ -27,6 +27,10 @@ a{
   text-decoration: none;
 }
 
+p{
+  text-align: center;
+}
+
 ul{
   list-style: none;
   width:50%;

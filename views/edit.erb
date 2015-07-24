@@ -1,0 +1,15 @@
+<h2> Edit yo' photos: </h2>
+
+<form method="post" action="/posts/<%= @post.id %>">
+  <input type="hidden" name="_method" value="put">
+
+  <input name="post[author]" type="text" placeholder="Author" value="<%= @post.author %>">
+  <input name="post[photo_url]" type="text" placeholder="http://blah.blah.com/img.jpg" value="<%= @post.photo_url %>">
+  <input name="post[date_taken]" type="text" placeholder="December 31, 1999" value="<%= @post.date_taken %>">
+  <input type="submit" value="Edit">
+</form>
+
+<form method="post" action="/posts/<%= @post.id %>">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Post">
+</form>
